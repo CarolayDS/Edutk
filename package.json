@@ -10,6 +10,12 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
+    "@google-cloud/documentai": "^9.3.0",
+    "@supabase/supabase-js": "^2.55.0",
+    "axios": "^1.11.0",
+    "genai": "^0.0.18",
+    "jspdf": "^3.0.1",
+    "jspdf-autotable": "^5.0.2",
     "vue": "^3.5.13",
     "vue-router": "^4.5.1"
   },

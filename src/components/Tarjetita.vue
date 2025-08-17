@@ -13,11 +13,12 @@ defineProps({
     <div class="card-content">
       <h3 class="card-title">{{ titulo }}</h3>
       <p class="card-description">{{ descripcion }}</p>
-      <a :href="accion" target="_blank" rel="noopener" class="card-button">Ver más</a>
+      <router-link :to="accion" class="card-button">
+        Ver más
+      </router-link>
     </div>
   </div>
 </template>
-
 
 
 <style scoped>
@@ -50,7 +51,7 @@ defineProps({
 .card-title {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #02542D;
+  color: #0731c6;
   margin-bottom: 0.5rem;
 }
 
@@ -58,11 +59,11 @@ defineProps({
   font-size: 0.95rem;
   color: #555;
   margin-bottom: 1rem;
-  text-align: justify;
+  text-align: center;
 }
 
 .card-button {
-  background-color: #02542D;
+  background-color: #0731c6;
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
@@ -74,6 +75,6 @@ defineProps({
 }
 
 .card-button:hover {
-  background-color: #14b961;
+  background-color: #06b5f8;
 }
 </style>

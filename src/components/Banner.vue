@@ -111,7 +111,7 @@ defineProps({
 
 .banner-btn {
   background-color: #ffffff;
-  color: #02542c;
+  color: #0731c6;
   border: none;
   padding: 0.7rem 1.5rem;
   font-size: 1rem;
@@ -123,7 +123,7 @@ defineProps({
 }
 
 .banner-btn:hover {
-  background-color: #02542c;
+  background-color: #0731c6;
   color: #ffffff;
 }
 

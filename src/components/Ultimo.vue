@@ -8,7 +8,7 @@
       
       <!-- Logo y redes -->
       <div class="footer-column">
-        <img src="../assets/jpb_insignia_.png" alt="Logo JPB" class="footer-logo" />
+        <img src="../assets/edutk.png" alt="Logo EDUTK" class="footer-logo" />
         <p class="footer-follow">Síguenos:</p>
         <div class="footer-socials">
           <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
@@ -20,15 +20,15 @@
       <!-- Contacto -->
       <div class="footer-column">
         <h3>CONTACTO</h3>
-        <p><i class="fas fa-map-marker-alt"></i> Av. Luis Gálvez Chipoco N.º 271</p>
+        <p><i class="fas fa-map-marker-alt"></i> Lima - Perú </p>
         <p><i class="fas fa-phone"></i> (056) 264248 - 922 485 902</p>
-        <p><i class="fas fa-envelope"></i> amagallanes@svp.edu.pe</p>
+        <p><i class="fas fa-envelope"></i> EduTK@gmail.com</p>
       </div>
 
       <!-- Mapa -->
       <div class="footer-column">
         <iframe
-          src="https://www.google.com/maps?q=IEE%20Jose%20Pardo%20y%20Barreda%20Chincha&output=embed"
+          src="https://www.google.com/maps?q=lima&output=embed"
           loading="lazy"
           allowfullscreen
         ></iframe>
@@ -37,14 +37,14 @@
 
     <!-- Línea final -->
     <div class="footer-bottom">
-      Chincha | Ica - Perú | Todos los Derechos Reservados © 2025 - <strong>I.E.E. “JOSÉ PARDO Y BARREDA”</strong>
+       Todos los Derechos Reservados © 2025 - <strong>EDUTK</strong>
     </div>
   </footer>
 </template>
 
 <style scoped>
 .footer {
-  border-top: 1.6px solid #02542D;
+  border-top: 1.6px solid #0731c6;
   box-shadow: 0 -2px 9px rgba(2, 84, 45, 0.15);
   background-color: #ffffff;
   width: 100%;
@@ -68,7 +68,7 @@
 .footer-column {
   flex: 1 1 300px;
   padding: 0 0.5rem;        /* reduce espacio horizontal */
-  color: #02542D;
+  color: #0731c6;
   text-align: left;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .footer-socials a:hover {
-  color: #017a3a;
+  color: #0731c6;
 }
 
 .footer-column h3 {
@@ -112,7 +112,7 @@
   text-align: center;
   margin-top: 1.5rem;
   font-size: 0.95rem;
-  color: #A88C05;
+  color: #06b5f8;
 }
 
 /* Responsivo */

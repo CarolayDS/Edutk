@@ -4,16 +4,14 @@ import principal from '../assets/principal.png'
 import mision from '../assets/mision.png'
 import vision from '../assets/vision.png'
 import nosotros1 from '../assets/nosotros1.png'
+import edutk_inicio from  '../assets/edutk_inicio.png'
 </script>
 
 <template>
   <div class="contenido">
     <!-- Banner principal -->
-    <img :src="principal" alt="Principal Pardo Foto" class="principal-img" />
-    <h1>ALMA MATER DE LA JUVENTUD CHINCHANA</h1>
-    <h2>"JUVENTUD JUVENTUD A LA GLORIA"</h2>
-    <p>- DESDE 1918 -</p>
-    <p>Al servicio de niños y jóvenes, dedicado a brindar una educación basada en valores y con altos estándares académicos.</p>
+    <img :src="edutk_inicio" alt="Principal  Foto" class="principal-img" />
+    <h2>Startup peruana innovadora dedicada a transformar la educación en el Perú</h2>
 
     <!-- Galería de Misión y Visión -->
     <div class="galeria">
@@ -21,17 +19,14 @@ import nosotros1 from '../assets/nosotros1.png'
         <img :src="mision" alt="Misión" />
         <h3>MISIÓN</h3>
         <p class="descripcion">
-          Asegurar que los estudiantes completen su formación escolar con éxito, afianzando los
-          aprendizajes del Currículo Nacional de la Educación Básica y cultivando virtudes que
-          contribuyan al desarrollo de la región ICA, provincia de Chincha y distrito de Chincha Alta.
+          EduTK tiene como misión brindar a los docentes una herramienta eficiente para la creación y corrección de exámenes, automatizando procesos para reducir su carga laboral y promover su bienestar. A través de la tecnología, buscamos optimizar el tiempo de los docentes, permitiéndoles enfocarse en la enseñanza y el desarrollo académico de sus estudiantes, mientras mejoramos su calidad de vida y salud mental.
         </p>
       </div>
       <div class="item item-vision">
         <img :src="vision" alt="Visión" />
         <h3>VISIÓN</h3>
         <p class="descripcion">
-          Alcanzar el reconocimiento como una comunidad educativa líder, acreditada y certificada,
-          que brinde una formación integral de excelencia y alto nivel académico.
+          Ser la plataforma líder en la automatización de procesos educativos, proporcionando soluciones innovadoras para la creación y corrección de exámenes, que no solo optimicen el tiempo del docente, sino que también contribuyan a su bienestar. EduTK aspira a ser un aliado clave para los educadores, apoyando la educación de calidad sin comprometer su salud y calidad de vida.
         </p>
       </div>
     </div>
@@ -39,8 +34,7 @@ import nosotros1 from '../assets/nosotros1.png'
     <!-- BANNER NOSOTROS-->
     <Banner
         title="NOSOTROS"
-        description="Somos el Colegio José Pardo y Barreda, con más de 100 años de historia dedicados a formar
-          ciudadanos responsables y comprometidos con el progreso de la juventud chinchana."
+        description="EduTK es una startup peruana innovadora dedicada a transformar la educación mediante el uso de tecnologías educativas. Con el objetivo de optimizar el tiempo de los docentes y mejorar su bienestar, ofrecemos soluciones que automatizan la creación y corrección de exámenes."
         :image="nosotros1"
         :buttons="[
         { label: 'Ver más', to: '/nosotros' },
@@ -67,11 +61,12 @@ import nosotros1 from '../assets/nosotros1.png'
 
 /* Títulos */
 .contenido h1 {
-  color: #02542D;
+  color: #0731c6;
   margin-top: 1rem;
 }
 .contenido h2 {
-  color: #A88C05;
+  color: #0731c6;
+  margin-top: 5rem;
   margin-bottom: 1rem;
 }
 
@@ -90,14 +85,14 @@ import nosotros1 from '../assets/nosotros1.png'
 }
 
 .item img {
-  width: 40%;
+  width: 70%;
   margin: 0 auto 1rem;
   display: block;
   object-fit: cover;
 }
 
 .item h3 {
-  color: #02542D;
+  color: #06b5f8;
   margin-bottom: 0.5rem;
 }
 

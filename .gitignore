@@ -22,3 +22,23 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Python
+env/
+venv/
+.venv/
+__pycache__/
+*.pyc
+requeriments.txt
+
+# Local env
+.env
+.env.local
+.env.* 
+google_ocr.json
+clave.txt
+
+# Editor
+.vscode/
+.DS_Store
+Thumbs.db

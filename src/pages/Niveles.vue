@@ -1,40 +1,54 @@
 <script setup>
 import Banner from '../components/Banner.vue'
-import auditorio from '../assets/auditorio.png' 
-import inicial from '../assets/inicial.png' 
-import primaria from '../assets/primaria.png' 
-import secundaria from '../assets/secundaria.png' 
+import Tarjetita from '../components/Tarjetita.vue'
+import auditorio from '../assets/auditorio.png'
+import primaria from '../assets/primaria.png'
+import secundaria from '../assets/secundaria.png'
+import banner2 from '../assets/banner2.png'
+import gamma from '../assets/gamma.jpg'
+import scribe from '../assets/scribe.jpg'
+import writesonic from '../assets/writesonic.png'
 </script>
 
 <template>
-  <Banner
-    title="NIVELES"
-    description="En nuestra institución educativa, acompañamos a los estudiantes en cada etapa de su desarrollo, desde el nivel Inicial hasta Secundaria, brindando una formación integral, valores sólidos y experiencias de aprendizaje significativas. "
-    :image="auditorio"
-  />
-    <Banner
-    title="INICIAL"
-    description="Promovemos el desarrollo integral de nuestros pequeños a través del juego, la creatividad y el afecto. Fomentamos la curiosidad, el respeto y la seguridad en un entorno cálido que les permite descubrir el mundo que los rodea."
-    :image="inicial"
-    :buttons="[
-      { label: 'Visitar Facebook', href: 'https://www.google.com'  },
-    ]"
-  />
-      <Banner
-    title="PRIMARIA"
-    description="Formamos estudiantes con sólidos valores, pensamiento crítico y amor por el aprendizaje. Acompañamos su crecimiento académico y emocional, fortaleciendo sus habilidades sociales y su autonomía con una educación dinámica y participativa."
-    :image="primaria"
-    :buttons="[
-      { label: 'Visitar Facebook', href: 'https://www.google.com'  },
-    ]"
-  />
+    <div>
+        <Banner
+            title="MATERIALES"
+            description="Estas tecnologías avanzadas están revolucionando sectores clave como la educación, la salud, el comercio y la industria, brindando soluciones innovadoras para mejorar la eficiencia y calidad en el trabajo."
+            :image="banner2"
+        />
+        <div class="tarjetas-container">
+            <Tarjetita
+            titulo="Gamma"
+            descripcion="Gamma es una plataforma de IA que permite crear presentaciones y contenido visual interactivo. La IA ayuda a generar diapositivas y gráficos automáticamente, optimizando el tiempo de los docentes para crear materiales educativos atractivos y efectivos."
+            :imagen="gamma"
+            :accion="'https://gamma.app/es'"
+            />
 
-    <Banner
-    title="SECUNDARIA"
-    description="Guiamos a nuestros estudiantes hacia una formación académica sólida y una proyección personal responsable. Les brindamos herramientas para enfrentar los retos del futuro, desarrollar su identidad y prepararse para estudios superiores o técnicos."
-    :image="secundaria"
-    :buttons="[
-      { label: 'Visitar Facebook', href: 'https://www.google.com'  },
-    ]"
-  />
+            <Tarjetita
+            titulo="Scribe"
+            descripcion="Scribe es una herramienta de IA diseñada para crear tutoriales y guías paso a paso. Los docentes pueden grabar sus procesos y la IA generará automáticamente un tutorial interactivo, ideal para explicar conceptos complejos a los estudiantes de manera fácil."
+            :imagen="scribe"
+            :accion="'https://creati.ai/es/ai-tools/scribe-ai-documentation-sops-screenshots/'"
+            />
+
+            <Tarjetita
+            titulo="WriteSonic"
+            descripcion="WriteSonic es una herramienta de generación de contenido con IA que permite a los profesores crear artículos, resúmenes, y material educativo en cuestión de segundos. Su inteligencia artificial ayuda a redactar textos coherentes y bien estructurados para el aula."
+            :imagen="writesonic"
+            :accion="'https://writesonic.com/'"
+            />
+
+        </div>
+    </div>
 </template>
+
+<style scoped>
+.tarjetas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* espacio entre tarjetas */
+  padding: 1rem 1rem;
+}
+</style>
