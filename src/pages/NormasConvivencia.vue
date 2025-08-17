@@ -249,7 +249,20 @@ export default {
       doc.text('Generado por EduTK', 105, 290, { align: 'center' });
 
       // Descargar
-      doc.save(`examen_${this.grade.nombre_estudiante}.pdf`);
+      //doc.save(`examen_${this.grade.nombre_estudiante}.pdf`);
+      // Crear el PDF
+      const pdfOutput = doc.output('blob');
+
+      // Crear un enlace de descarga
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(pdfOutput);
+      link.download = `examen_${this.grade.nombre_estudiante}.pdf`;
+
+      // Agregar el enlace al DOM, simular el clic y luego eliminarlo
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
     },
   },
 };
