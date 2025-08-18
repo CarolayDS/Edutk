@@ -36,16 +36,6 @@
         <img v-if="selectedFile.type.startsWith('image/')" :src="filePreviewUrl" alt="Imagen seleccionada" class="file-preview" />
       </div>
 
-      <!-- Mostrar el texto extraído -->
-      <div v-if="extractedText" style="text-align:left; margin-top:1rem">
-        <h3>Texto extraído:</h3>
-        <textarea
-          :value="extractedText"
-          readonly
-          rows="12"
-          style="width:100%;"
-        ></textarea>
-      </div>
       <!-- Mostrar la calificación obtenida -->
       <div v-if="grade" class="mt-6">
 
