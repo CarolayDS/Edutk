@@ -53,6 +53,10 @@ button:disabled {
   cursor: not-allowed;
 }
 
-
-
+@media (max-width: 768px) {
+  button {
+    width: 80%;  
+    font-size: 1.1rem; 
+  }
+}
 </style>
