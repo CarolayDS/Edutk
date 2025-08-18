@@ -1,6 +1,5 @@
 <script setup>
 import Banner from '../components/Banner.vue'
-import principal from '../assets/principal.png'
 import mision from '../assets/mision.png'
 import vision from '../assets/vision.png'
 import nosotros1 from '../assets/nosotros1.png'

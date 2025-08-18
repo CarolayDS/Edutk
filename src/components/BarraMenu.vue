@@ -37,16 +37,13 @@ function scrollToTop() {
           <router-link to="/" class="btn-menu" @click="menuAbierto = false; scrollToTop()">Inicio</router-link>
         </li>
         <li>
-          <router-link to="/nosotros" class="btn-menu" @click="menuAbierto = false; scrollToTop()">Nosotros</router-link>
-        </li>
-        <li>
-          <router-link to="/niveles" class="btn-menu" @click="menuAbierto = false; scrollToTop()">Materiales</router-link>
+          <router-link to="/materiales" class="btn-menu" @click="menuAbierto = false; scrollToTop()">Materiales</router-link>
         </li>
         <li>
           <router-link to="/examenes" class="btn-menu" @click="menuAbierto = false; scrollToTop()">Exámenes</router-link>
         </li>
         <li>
-          <router-link to="/normasconvivencia" class="btn-menu" @click="menuAbierto = false; scrollToTop()">Corrección</router-link>
+          <router-link to="/correccion" class="btn-menu" @click="menuAbierto = false; scrollToTop()">Corrección</router-link>
         </li>
          <li>
           <button @click="logout" class="btn-menu">Salir</button>
