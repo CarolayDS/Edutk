@@ -283,7 +283,7 @@ export default {
   border-radius: 20px;
   padding: 2rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  max-width: 650px;
+  max-width: 750px;
   width: 100%;
   text-align: left;
 }
