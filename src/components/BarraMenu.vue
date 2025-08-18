@@ -16,7 +16,7 @@ function scrollToTop() {
     <div class="navbar-container">
       <!-- Logo -->
       <div class="logo">
-        <img src="../assets/edutk.png" alt="Logo JPB" />
+        <img src="../assets/edutk.png" alt="Logo EDUTK" />
       </div>
 
       <!-- Botón hamburguesa -->
