@@ -56,32 +56,42 @@
         <p><strong>🏫 Sección:</strong> {{ grade.seccion }}</p>
         <p><strong>📝 Nota final:</strong> {{ grade.nota_final }}</p>
 
-        <!-- Tabla de resultados -->
-        <div class="overflow-x-auto mt-6">
-          <table class="min-w-full border border-gray-400 border-collapse">
-            <thead class="bg-gray-200">
-              <tr>
-                <th class="px-4 py-2 border border-gray-400">#</th>
-                <th class="px-4 py-2 border border-gray-400">Pregunta</th>
-                <th class="px-4 py-2 border border-gray-400">Respuesta del Estudiante</th>
-                <th class="px-4 py-2 border border-gray-400">Corrección</th>
-                <th class="px-4 py-2 border border-gray-400">Estado</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(r, idx) in grade.respuestas" :key="idx" class="bg-white">
-                <td class="px-4 py-2 border border-gray-400">{{ r.numero_pregunta }}</td>
-                <td class="px-4 py-2 border border-gray-400">{{ r.pregunta }}</td>
-                <td class="px-4 py-2 border border-gray-400">{{ r.respuesta_estudiante }}</td>
-                <td class="px-4 py-2 border border-gray-400">{{ r.correccion }}</td>
-                <td class="px-4 py-2 border border-gray-400 text-center">
-                  <span v-if="r.correcta" class="text-green-600 font-bold">✔️ Correcto</span>
-                  <span v-else class="text-red-600 font-bold">❌ Incorrecto</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <!-- Resultados en formato vertical -->
+        <div class="space-y-4 mt-6">
+          <div 
+            v-for="(r, idx) in grade.respuestas" 
+            :key="idx"
+            class="p-4 border rounded-lg shadow-sm"
+            :class="r.correcta ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50'"
+          >
+            <!-- Número de pregunta -->
+            <h3 class="font-bold text-lg mb-2">Pregunta {{ r.numero_pregunta }}</h3>
 
+            <!-- Texto de la pregunta -->
+            <p class="mb-2"><span class="font-semibold">Enunciado:</span> {{ r.pregunta }}</p>
+
+            <!-- Respuesta del estudiante -->
+            <p class="mb-2"><span class="font-semibold">Respuesta del Estudiante:</span> {{ r.respuesta_estudiante }}</p>
+
+            <!-- Corrección -->
+            <p class="mb-2"><span class="font-semibold">Corrección:</span> {{ r.correccion }}</p>
+
+            <!-- Estado -->
+            <div class="mt-2">
+              <span 
+                v-if="r.correcta" 
+                class="px-3 py-1 text-sm font-bold text-green-700 bg-green-200 rounded"
+              >
+                ✔️ Correcto
+              </span>
+              <span 
+                v-else 
+                class="px-3 py-1 text-sm font-bold text-red-700 bg-red-200 rounded"
+              >
+                ❌ Incorrecto
+              </span>
+            </div>
+          </div>
         </div>
 
         <!-- Feedback general -->
