@@ -1,12 +1,12 @@
 <template>
   <div class="upload-container">
     <div class="card">
+      <h1 class="title">Adjunta tu Examen aquí</h1>
       <img
-        src="https://cdn-icons-png.flaticon.com/512/3039/3039436.png"
+        src='../assets/4.png'
         alt="Upload Exam"
         class="upload-image"
       />
-      <h1 class="title">Sube tu examen</h1>
       <p class="description">
         Ingresa tu examen en PDF o una imagen para corregirlo con ayuda de la IA
       </p>
@@ -288,7 +288,7 @@ export default {
   text-align: left;
 }
 .upload-image {
-  width: 100px;
+  width: 200px;
   margin-bottom: 1rem;
   display: block;
   margin-left: auto;
@@ -296,13 +296,13 @@ export default {
 }
 .title {
   font-size: 1.8rem;
-  color: #1e3a8a;
+  color: #007bff;
   margin-bottom: 0.5rem;
   text-align: center;
 }
 .description {
   font-size: 1rem;
-  color: #3b5998;
+  color: #0b0c0c;
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -316,10 +316,10 @@ export default {
   border: 1px solid #90cdf4;
   border-radius: 10px;
   background-color: #f0f9ff;
-  width: 100%;
+  width: 97%;
 }
 .submit-button {
-  background-color: #3b82f6;
+  background-color: #007bff;
   color: white;
   border: none;
   padding: 0.8rem;

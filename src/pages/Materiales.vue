@@ -1,9 +1,6 @@
 <script setup>
 import Banner from '../components/Banner.vue'
 import Tarjetita from '../components/Tarjetita.vue'
-import auditorio from '../assets/auditorio.png'
-import primaria from '../assets/primaria.png'
-import secundaria from '../assets/secundaria.png'
 import banner2 from '../assets/banner2.png'
 import gamma from '../assets/gamma.jpg'
 import scribe from '../assets/scribe.jpg'

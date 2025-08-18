@@ -113,7 +113,7 @@ export default {
 }
 
 .btn-menu {
-  background-color: #06b5f8 ;
+  background-color: #007bff;
   color: #ffffff;
   padding: 0.5em 1.1em;
   border: none;

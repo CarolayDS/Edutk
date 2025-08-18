@@ -1,6 +1,11 @@
 <template>
   <div id="exam-escrito">
-    <h2>¡CREAR EXAMEN!</h2>
+    <h2>Generar Nuevo Examen</h2>
+    <img
+        src='../assets/7.png'
+        alt="Upload Exam"
+        class="upload-image"
+    />
 
     <form @submit.prevent="generateExam">
       <!-- Subir Logo -->
@@ -10,6 +15,12 @@
         </label>
         <input type="file" id="logo" @change="handleLogoUpload" />
       </div>
+
+      <!-- Vista previa -->
+      <div v-if="examData.logo" class="preview">
+        <img :src="examData.logo" alt="Vista previa del logo" />
+      </div>
+
 
       <!-- Información del Examen -->
       <div>
@@ -99,7 +110,7 @@ export default {
       if (file && file.type.startsWith('image/')) {
         const reader = new FileReader();
         reader.onload = () => {
-          this.examData.logo = reader.result;
+          this.examData.logo = reader.result; 
         };
         reader.readAsDataURL(file);
       } else {
@@ -219,14 +230,28 @@ export default {
 </script>
 
 <style scoped>
+.upload-image {
+  width: 200px;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.preview img {
+  max-width: 200px;
+  max-height: 200px;
+  margin-top: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
 
 #exam-escrito {
   max-width: 800px;
   margin: auto;
   padding: 30px;
-  background-color: #f0f8ff;
+  background-color: #d6e8f6;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
+  box-shadow: 0 0 15px rgba(213, 236, 215, 0.2);
   font-family: 'Segoe UI', sans-serif;
   margin-top: 40px;  
   margin-bottom: 40px;
@@ -248,7 +273,7 @@ form label {
 input[type="text"], select {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccddee;
+  border: 1px solid #5ba3ef;
   border-radius: 6px;
   box-sizing: border-box;
   margin-bottom: 15px;

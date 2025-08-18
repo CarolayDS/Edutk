@@ -44,11 +44,11 @@
 
 <style scoped>
 .footer {
-  border-top: 1.6px solid #0731c6;
-  box-shadow: 0 -2px 9px rgba(2, 84, 45, 0.15);
+  border-top: 1.6px solid #007bff;
+  box-shadow: 0 -2px 9px rgba(4, 17, 74, 0.15);
   background-color: #ffffff;
   width: 100%;
-  padding: 2rem 0.5rem; /* menos espacio horizontal */
+  padding: 2rem 0.5rem; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,8 +67,8 @@
 
 .footer-column {
   flex: 1 1 300px;
-  padding: 0 0.5rem;        /* reduce espacio horizontal */
-  color: #0731c6;
+  padding: 0 0.3rem;        /* reduce espacio horizontal */
+  color: #007bff;
   text-align: left;
 }
 
@@ -126,7 +126,7 @@
 
   .footer-column {
     flex: 1 1 100%;
-    padding: 0.5rem 0;
+    padding: 0.2rem 0;
   }
 }
 
