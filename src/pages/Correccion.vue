@@ -58,7 +58,7 @@
 
         <!-- Tabla de resultados -->
         <div class="overflow-x-auto mt-6">
-          <table class="min-w-full border border-gray-300">
+          <table class="min-w-full border border-gray-400 border-collapse">
             <thead class="bg-gray-200">
               <tr>
                 <th class="px-4 py-2 border">#</th>
@@ -75,8 +75,8 @@
                 <td class="px-4 py-2 border">{{ r.respuesta_estudiante }}</td>
                 <td class="px-4 py-2 border">{{ r.correccion }}</td>
                 <td class="px-4 py-2 border text-center">
-                  <span v-if="r.correcta" class="text-green-600 font-bold">✔️ Correcto</span>
-                  <span v-else class="text-red-600 font-bold">❌ Incorrecto</span>
+                  <span v-if="r.correcta" class="text-green-600 font-bold">✔️ Bien</span>
+                  <span v-else class="text-red-600 font-bold">❌ Mal</span>
                 </td>
               </tr>
             </tbody>
