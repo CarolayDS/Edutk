@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 button {
-  width: 400px; 
+  width: 30%; 
   padding: 0.9rem;
   border: none;
   border-radius: 0.6rem;
