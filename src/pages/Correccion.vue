@@ -61,26 +61,27 @@
           <table class="min-w-full border border-gray-400 border-collapse">
             <thead class="bg-gray-200">
               <tr>
-                <th class="px-4 py-2 border">#</th>
-                <th class="px-4 py-2 border">Pregunta</th>
-                <th class="px-4 py-2 border">Respuesta del Estudiante</th>
-                <th class="px-4 py-2 border">Corrección</th>
-                <th class="px-4 py-2 border">Estado</th>
+                <th class="px-4 py-2 border border-gray-400">#</th>
+                <th class="px-4 py-2 border border-gray-400">Pregunta</th>
+                <th class="px-4 py-2 border border-gray-400">Respuesta del Estudiante</th>
+                <th class="px-4 py-2 border border-gray-400">Corrección</th>
+                <th class="px-4 py-2 border border-gray-400">Estado</th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="(r, idx) in grade.respuestas" :key="idx" class="bg-white">
-                <td class="px-4 py-2 border">{{ r.numero_pregunta }}</td>
-                <td class="px-4 py-2 border">{{ r.pregunta }}</td>
-                <td class="px-4 py-2 border">{{ r.respuesta_estudiante }}</td>
-                <td class="px-4 py-2 border">{{ r.correccion }}</td>
-                <td class="px-4 py-2 border text-center">
-                  <span v-if="r.correcta" class="text-green-600 font-bold">✔️ Bien</span>
-                  <span v-else class="text-red-600 font-bold">❌ Mal</span>
+                <td class="px-4 py-2 border border-gray-400">{{ r.numero_pregunta }}</td>
+                <td class="px-4 py-2 border border-gray-400">{{ r.pregunta }}</td>
+                <td class="px-4 py-2 border border-gray-400">{{ r.respuesta_estudiante }}</td>
+                <td class="px-4 py-2 border border-gray-400">{{ r.correccion }}</td>
+                <td class="px-4 py-2 border border-gray-400 text-center">
+                  <span v-if="r.correcta" class="text-green-600 font-bold">✔️ Correcto</span>
+                  <span v-else class="text-red-600 font-bold">❌ Incorrecto</span>
                 </td>
               </tr>
             </tbody>
           </table>
+
         </div>
 
         <!-- Feedback general -->
