@@ -68,13 +68,13 @@
             <h3 class="font-bold text-lg mb-2">Pregunta {{ r.numero_pregunta }}</h3>
 
             <!-- Texto de la pregunta -->
-            <p class="mb-2"><span class="font-semibold">Enunciado:</span> {{ r.pregunta }}</p>
+            <p class="mb-2"><span class="font-semibold">Enunciado:</span> {{ r.pregunta_texto }}</p>
 
             <!-- Respuesta del estudiante -->
             <p class="mb-2"><span class="font-semibold">Respuesta del Estudiante:</span> {{ r.respuesta_estudiante }}</p>
 
             <!-- Corrección -->
-            <p class="mb-2"><span class="font-semibold">Corrección:</span> {{ r.correccion }}</p>
+            <p class="mb-2"> {{ r.correccion }}</p>
 
             <!-- Estado -->
             <div class="mt-2">
@@ -103,7 +103,7 @@
         <!-- Botón para exportar a PDF -->
         <button
           @click="exportarPDF"
-          class="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+          class="submit-button"
         >
           📄 Exportar PDF
         </button>
