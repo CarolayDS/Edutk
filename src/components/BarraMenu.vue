@@ -46,7 +46,7 @@ function scrollToTop() {
           <router-link to="/correccion" class="btn-menu" @click="menuAbierto = false; scrollToTop()">Corrección</router-link>
         </li>
          <li>
-          <button @click="logout" class="btn_salir">Salir</button>
+          <button @click="logout" class="btn-menu">Salir</button>
         </li>
       </ul>
 
@@ -55,26 +55,28 @@ function scrollToTop() {
 </template>
 
 <script>
-import { supabase } from "../../supabase"; // Asegúrate de importar supabase si lo necesitas
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { supabase } from "../../supabase"
 
-export default {
-  methods: {
-    async logout() {
-      try {
-        const { error } = await supabase.auth.signOut();
-        if (error) throw error;
-        // Redirige al login o a la página de inicio
-        this.$router.push('/login');
-      } catch (error) {
-        console.error('Error al cerrar sesión:', error.message);
-      }
-    },
-    scrollToTop() {
-      window.scrollTo(0, 0);
-    }
+const menuAbierto = ref(false)
+const router = useRouter()
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+async function logout() {
+  try {
+    const { error } = await supabase.auth.signOut()
+    if (error) throw error
+    router.push('/login') // usa router de setup
+  } catch (error) {
+    console.error('Error al cerrar sesión:', error.message)
   }
 }
 </script>
+
 
 <style scoped>
 /* NAVBAR */
@@ -129,29 +131,6 @@ export default {
   margin-top: -5px;
   font-family: 'Great Vibes', cursive;
 }
-.btn_salir {
-  background-color: #f0cc7e;
-  color: #ffffff;
-  padding: 0.5em 1.1em;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 0.8rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: -5px;
-  font-family: 'Great Vibes', cursive;
-}
-
-.btn-menu:hover, .btn_salir {
-  background-color: #0731c6;
-  transform: scale(1.05);
-}
-
 
 /* HAMBURGUESA */
 .hamburguesa {

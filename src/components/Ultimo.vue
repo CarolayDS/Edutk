@@ -3,6 +3,7 @@
 </script>
 
 <template>
+  
   <footer id="footer" class="footer">
     <div class="footer-container">
       

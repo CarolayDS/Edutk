@@ -96,6 +96,7 @@ h1 {
   font-weight: bold;
   color: #06b5f8;
   margin-bottom: 1.8rem;
+    font-family: 'Great Vibes', cursive;
 }
 
 label {
@@ -105,6 +106,7 @@ label {
   font-weight: 500;
   color: #374151;
   margin-bottom: 0.4rem;
+    font-family: 'Great Vibes', cursive;
 }
 
 input {
