@@ -5,6 +5,7 @@ import vision from '../assets/vision.png'
 import nosotros1 from '../assets/nosotros_banner.png'
 import edutk_inicio from  '../assets/edutk_principal.png'
 import info_edutk from  '../assets/info_edutk.png'
+import somos from  '../assets/somos.svg'
 import Tarjetita from '../components/Tarjetita.vue'
 </script>
 
@@ -42,7 +43,7 @@ import Tarjetita from '../components/Tarjetita.vue'
             </div>
             <!-- Columna de imagen -->
             <div class="columna imagen-col">
-                <img :src="mision" alt="Ing" class="img_columna" />
+                <img :src="somos" alt="Ing" class="img_columna" />
             </div>
         </div>
 

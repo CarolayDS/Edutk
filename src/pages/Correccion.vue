@@ -287,6 +287,7 @@ export default {
   max-width: 750px;
   width: 100%;
   text-align: left;
+  font-family: 'Great Vibes', cursive;
 }
 .upload-image {
   width: 200px;
@@ -311,6 +312,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  
 }
 .file-input {
   padding: 0.5rem;
@@ -328,6 +330,7 @@ export default {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-family: 'Great Vibes', cursive;
 }
 .submit-button:hover {
   background-color: #2563eb;

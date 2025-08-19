@@ -252,7 +252,7 @@ export default {
   background-color: #d6e8f6;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(213, 236, 215, 0.2);
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Great Vibes', cursive;
   margin-top: 40px;  
   margin-bottom: 40px;
 }
@@ -267,7 +267,7 @@ form label {
   display: block;
   margin: 10px 0 5px;
   color: #0056b3;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 input[type="text"], select {
@@ -307,6 +307,7 @@ button {
   cursor: pointer;
   font-size: 14px;
   margin: 10px 10px 0 0;
+  font-family: 'Great Vibes', cursive;
 }
 
 button:hover {
@@ -316,6 +317,7 @@ button:hover {
 .options-container {
   display: flex;
   flex-wrap: wrap;
+  font-family: 'Great Vibes', cursive;
 }
 
 .option-checkbox {

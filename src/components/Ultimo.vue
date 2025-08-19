@@ -13,7 +13,7 @@
         <div class="footer-socials">
           <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
           <a href="#"><i class="fab fa-youtube fa-lg"></i></a>
-          <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="https://www.instagram.com/edutk_/"><i class="fab fa-instagram fa-lg"></i></a>
         </div>
       </div>
 
@@ -21,7 +21,7 @@
       <div class="footer-column">
         <h3>CONTACTO</h3>
         <p><i class="fas fa-map-marker-alt"></i> Lima - Perú </p>
-        <p><i class="fas fa-phone"></i> (056) 264248 - 922 485 902</p>
+        <p><i class="fas fa-phone"></i> 945671217</p>
         <p><i class="fas fa-envelope"></i> EduTK@gmail.com</p>
       </div>
 
@@ -55,6 +55,7 @@
 }
 
 .footer-container {
+  font-family: 'Great Vibes', cursive;
   width: 100%;
   max-width: 1000px;        /* más reducido que 1200px */
   margin: 0 auto;           /* centra el contenido */
@@ -108,6 +109,7 @@
 }
 
 .footer-bottom {
+  font-family: 'Great Vibes', cursive;
   width: 100%;
   text-align: center;
   margin-top: 1.5rem;

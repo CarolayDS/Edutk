@@ -61,6 +61,7 @@ defineProps({
 }
 
 .card-description {
+  font-family: 'Great Vibes', cursive;
   font-size: 0.95rem;
   color: #555;
   margin-bottom: 1rem;

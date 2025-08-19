@@ -46,7 +46,7 @@ function scrollToTop() {
           <router-link to="/correccion" class="btn-menu" @click="menuAbierto = false; scrollToTop()">Corrección</router-link>
         </li>
          <li>
-          <button @click="logout" class="btn-menu">Salir</button>
+          <button @click="logout" class="btn_salir">Salir</button>
         </li>
       </ul>
 
@@ -127,9 +127,27 @@ export default {
   text-decoration: none;
   display: inline-block;
   margin-top: -5px;
+  font-family: 'Great Vibes', cursive;
+}
+.btn_salir {
+  background-color: #f0cc7e;
+  color: #ffffff;
+  padding: 0.5em 1.1em;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: -5px;
+  font-family: 'Great Vibes', cursive;
 }
 
-.btn-menu:hover {
+.btn-menu:hover, .btn_salir {
   background-color: #0731c6;
   transform: scale(1.05);
 }
@@ -169,7 +187,6 @@ export default {
   transform: translateY(-9px) rotate(-45deg);
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .hamburguesa {
     display: flex;
@@ -180,10 +197,10 @@ export default {
     top: 0;
     left: -100%;
     flex-direction: column;
-    background: #fff;
-    width: 30%;
+    background: #e4eff5;
+    width: 40%; /* más ancho para que los botones se vean bien */
     height: 100%;
-    padding: 1rem 1.5rem;
+    padding: 2rem 1.5rem;
     box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
     transition: left 0.4s ease;
     z-index: 1000;
@@ -194,22 +211,34 @@ export default {
   }
 
   .menu li {
-    margin: 1rem 0;
-    font-size: 1.2rem;
+    margin: 0.5rem 0;
     list-style: none;
+    width: 65%;
   }
 
   .menu a {
-    color: #e1e9ec;
-    text-decoration: none;
+    display: flex;               /* icono + texto */
+    align-items: center;          /* centra icono con texto */
+    justify-content: flex-start;  /* texto alineado a la izquierda */
+    gap: 10px;                    /* espacio entre icono y texto */
+    background: #239ac2;          /* color de fondo botón */
+    color: #fff;
+    font-size: 1.1rem;
     font-weight: bold;
-    transition: color 0.3s ease;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    width: 100%;                  /* todos igual de grandes */
+    box-sizing: border-box;
   }
 
   .menu a:hover {
-    color: #2d74dd;
+    background: #2d74dd;
   }
+
 }
+
 
 </style>
 
