@@ -1,44 +1,53 @@
 <script setup>
 import Banner from '../components/Banner.vue'
 import mision from '../assets/mision.png'
-import vision from '../assets/vision.png'
-import nosotros1 from '../assets/nosotros1.png'
-import edutk_inicio from  '../assets/edutk_inicio.png'
+import vision from '../assets/vision.png' 
+import nosotros1 from '../assets/nosotros_banner.png'
+import edutk_inicio from  '../assets/edutk_principal.png'
+import info_edutk from  '../assets/info_edutk.png'
+import Tarjetita from '../components/Tarjetita.vue'
 </script>
 
 <template>
   <div class="contenido">
     <!-- Banner principal -->
     <img :src="edutk_inicio" alt="Principal  Foto" class="principal-img" />
+
     <h2>Startup peruana innovadora dedicada a transformar la educación en el Perú</h2>
 
     <!-- Galería de Misión y Visión -->
     <div class="galeria">
-      <div class="item item-mision">
-        <img :src="mision" alt="Misión" />
-        <h3>MISIÓN</h3>
-        <p class="descripcion">
-          EduTK tiene como misión brindar a los docentes una herramienta eficiente para la creación y corrección de exámenes, automatizando procesos para reducir su carga laboral y promover su bienestar. A través de la tecnología, buscamos optimizar el tiempo de los docentes, permitiéndoles enfocarse en la enseñanza y el desarrollo académico de sus estudiantes, mientras mejoramos su calidad de vida y salud mental.
-        </p>
-      </div>
-      <div class="item item-vision">
-        <img :src="vision" alt="Visión" />
-        <h3>VISIÓN</h3>
-        <p class="descripcion">
-          Ser la plataforma líder en la automatización de procesos educativos, proporcionando soluciones innovadoras para la creación y corrección de exámenes, que no solo optimicen el tiempo del docente, sino que también contribuyan a su bienestar. EduTK aspira a ser un aliado clave para los educadores, apoyando la educación de calidad sin comprometer su salud y calidad de vida.
-        </p>
-      </div>
+          <Tarjetita
+            titulo="Misión"
+            descripcion="Brindar a los docentes una herramienta tecnológica que automatice la creación y corrección de exámenes, reduciendo su carga laboral y permitiéndoles dedicar más tiempo a la enseñanza, al mismo tiempo que se cuida su bienestar y salud mental."
+            :imagen="mision"
+          />
+          <Tarjetita
+            titulo="Visión"
+            descripcion="Convertirse en la plataforma líder en automatización de procesos educativos, ofreciendo soluciones innovadoras que optimicen el trabajo docente, mejoren su calidad de vida y fortalezcan una educación de calidad."
+            :imagen="vision"
+          />
     </div>
 
-    <!-- BANNER NOSOTROS-->
-    <Banner
-        title="NOSOTROS"
-        description="EduTK es una startup peruana innovadora dedicada a transformar la educación mediante el uso de tecnologías educativas. Con el objetivo de optimizar el tiempo de los docentes y mejorar su bienestar, ofrecemos soluciones que automatizan la creación y corrección de exámenes."
-        :image="nosotros1"
-        :buttons="[
-        { label: 'Ver más', to: '/nosotros' },
-        ]"
-    />
+    <img :src="nosotros1" alt="Principal  Foto" class="principal-img" />
+
+     <!-- Contenido HISTORIA JPB -->
+        <div class="historia-contenedor">
+            <!-- Columna de Historia  -->
+            <div class="columna texto-col">
+                <h1>¿Quiénes somos?</h1>
+                <p class="descripcion">
+                    Somos EDUTK, un equipo de jóvenes innovadores comprometidos con transformar la educación en el Perú a través de la tecnología. Creemos que los docentes son el motor de la enseñanza y que, liberándolos de tareas repetitivas, pueden enfocarse en lo más importante: conectar con sus estudiantes y brindar una educación de calidad. Nuestro propósito es ofrecer herramientas que automaticen procesos, reduzcan la carga laboral y abran nuevas oportunidades educativas, generando un impacto positivo en docentes y estudiantes.
+                </p>
+            </div>
+            <!-- Columna de imagen -->
+            <div class="columna imagen-col">
+                <img :src="mision" alt="Ing" class="img_columna" />
+            </div>
+        </div>
+
+
+        <img :src="info_edutk" alt="Principal  Foto" class="info-img" />
 </div>
 </template>
 
@@ -60,14 +69,19 @@ import edutk_inicio from  '../assets/edutk_inicio.png'
 
 /* Títulos */
 .contenido h1 {
-  color: #0731c6;
+  color: #4f74f9;
   margin-top: 1rem;
 }
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 .contenido h2 {
-  color: #0731c6;
+  font-family: 'Great Vibes', cursive;
+  color: #4f74f9;
   margin-top: 5rem;
   margin-bottom: 1rem;
+  font-size: 1.9rem;
 }
+
 
 /* Galería Misión/Visión */
 .galeria {
@@ -84,8 +98,8 @@ import edutk_inicio from  '../assets/edutk_inicio.png'
 }
 
 .item img {
-  width: 70%;
-  margin: 0 auto 1rem;
+  width: 100%;
+  margin: 3 auto 1rem;
   display: block;
   object-fit: cover;
 }
@@ -113,6 +127,56 @@ import edutk_inicio from  '../assets/edutk_inicio.png'
     width: 60%;
   }
   
+}
+
+
+/* HISTORIA E IMAGEN */
+.historia-contenedor {
+  font-family: 'Great Vibes', cursive;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Columnas individuales */
+.columna {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Imagen en la segunda columna */
+.img_columna {
+  display: block;
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+}
+
+.info-img {
+  max-width: 100%;   /* La imagen nunca será más grande que su contenedor */
+  height: auto;      /* Mantiene la proporción */
+  display: block;
+  margin: 0 auto;    /* Centra la imagen horizontalmente */
+  padding: 0;
+}
+
+
+/* 📱 Responsive para celular */
+@media (max-width: 768px) {
+  .historia-contenedor {
+    grid-template-columns: 1fr; /* pasa a 1 sola columna */
+    text-align: center;
+  }
+
+  .img_columna {
+    width: 90%;   /* que se vea más grande en móvil */
+    margin: 1rem auto;
+  }
 }
 
 </style>

@@ -13,9 +13,14 @@ defineProps({
     <div class="card-content">
       <h3 class="card-title">{{ titulo }}</h3>
       <p class="card-description">{{ descripcion }}</p>
-      <router-link :to="accion" class="card-button">
+      <a 
+        v-if="accion && accion.startsWith('http')" 
+        :href="accion" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="card-button">
         Ver más
-      </router-link>
+      </a>
     </div>
   </div>
 </template>
@@ -27,9 +32,9 @@ defineProps({
   border: 1px solid #ddd;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s ease;
-  background-color: #fff;
+  background-color: #ffffff;
   margin: 3rem;
 }
 
@@ -39,8 +44,7 @@ defineProps({
 
 .card-img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: 200px;
 }
 
 .card-content {
@@ -49,9 +53,10 @@ defineProps({
 }
 
 .card-title {
-  font-size: 1.2rem;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.3rem;
   font-weight: bold;
-  color: #0731c6;
+  color: #4f74f9;
   margin-bottom: 0.5rem;
 }
 
@@ -63,7 +68,8 @@ defineProps({
 }
 
 .card-button {
-  background-color: #0731c6;
+  font-family: 'Great Vibes', cursive;
+  background-color: #4f74f9;
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;

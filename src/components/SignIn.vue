@@ -143,7 +143,7 @@ button {
   padding: 0.9rem;
   border: none;
   border-radius: 0.6rem;
-  background: linear-gradient(to right, #06b5f8, #5878ee);
+  background: linear-gradient(to right, #06b5f8,#4f74f9);
   color: white;
   font-weight: bold;
   font-size: 1rem;

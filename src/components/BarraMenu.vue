@@ -140,29 +140,33 @@ export default {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 26px;
-  height: 20px;
+  width: 30px;
+  height: 22px;
   background: none;
   border: none;
   cursor: pointer;
+  z-index: 1001; /* para estar encima del menú */
 }
 
 .hamburguesa span {
   display: block;
   height: 3px;
+  width: 100%;
   background: #239ac2;
-  border-radius: 3px;
-  transition: all 0.3s ease;
+  border-radius: 5px;
+  transition: all 0.4s ease;
 }
 
+/* Animación al activar */
 .hamburguesa.activo span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg);
 }
 .hamburguesa.activo span:nth-child(2) {
   opacity: 0;
+  transform: translateX(-20px);
 }
 .hamburguesa.activo span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 /* RESPONSIVE */
@@ -172,24 +176,40 @@ export default {
   }
 
   .menu {
-    position: absolute;
-    top: 80px;
-    left: 0;
+    position: fixed;
+    top: 0;
+    left: -100%;
     flex-direction: column;
     background: #fff;
-    width: 100%;
-    padding: 1rem 2rem;
-    display: none;
-    z-index: 999;
+    width: 30%;
+    height: 100%;
+    padding: 1rem 1.5rem;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
+    transition: left 0.4s ease;
+    z-index: 1000;
   }
 
   .menu.abierto {
-    display: flex;
+    left: 0;
   }
 
   .menu li {
-    margin-bottom: 1rem;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    list-style: none;
+  }
+
+  .menu a {
+    color: #e1e9ec;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  .menu a:hover {
+    color: #2d74dd;
   }
 }
+
 </style>
 
