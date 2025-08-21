@@ -53,7 +53,6 @@ defineProps({
 }
 
 .card-title {
-  font-family: 'Great Vibes', cursive;
   font-size: 1.3rem;
   font-weight: bold;
   color: #4f74f9;
@@ -61,7 +60,6 @@ defineProps({
 }
 
 .card-description {
-  font-family: 'Great Vibes', cursive;
   font-size: 0.95rem;
   color: #555;
   margin-bottom: 1rem;
@@ -69,7 +67,7 @@ defineProps({
 }
 
 .card-button {
-  font-family: 'Great Vibes', cursive;
+
   background-color: #4f74f9;
   color: #fff;
   border: none;

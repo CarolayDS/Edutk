@@ -129,7 +129,7 @@ async function logout() {
   text-decoration: none;
   display: inline-block;
   margin-top: -5px;
-  font-family: 'Great Vibes', cursive;
+
 }
 
 /* HAMBURGUESA */

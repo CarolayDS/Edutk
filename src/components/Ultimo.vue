@@ -56,7 +56,6 @@
 }
 
 .footer-container {
-  font-family: 'Great Vibes', cursive;
   width: 100%;
   max-width: 1000px;        /* más reducido que 1200px */
   margin: 0 auto;           /* centra el contenido */
@@ -110,7 +109,7 @@
 }
 
 .footer-bottom {
-  font-family: 'Great Vibes', cursive;
+
   width: 100%;
   text-align: center;
   margin-top: 1.5rem;

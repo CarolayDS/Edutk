@@ -73,10 +73,9 @@ import Tarjetita from '../components/Tarjetita.vue'
   color: #4f74f9;
   margin-top: 1rem;
 }
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 
 .contenido h2 {
-  font-family: 'Great Vibes', cursive;
   color: #4f74f9;
   margin-top: 5rem;
   margin-bottom: 1rem;
@@ -133,7 +132,6 @@ import Tarjetita from '../components/Tarjetita.vue'
 
 /* HISTORIA E IMAGEN */
 .historia-contenedor {
-  font-family: 'Great Vibes', cursive;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
