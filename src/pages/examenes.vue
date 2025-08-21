@@ -36,30 +36,40 @@
         <input v-model="examData.titulo" type="text" placeholder="Título del examen" />
       </div>
 
-      <!-- Preguntas -->
-      <div v-for="(question, index) in examData.preguntas" :key="index">
-        <div>
-          <label :for="'pregunta-' + index">Pregunta {{ index + 1 }}:</label>
-          <input v-model="question.texto" type="text" placeholder="Escribe la pregunta aquí" />
-        </div>
 
-        <!-- Tipo de Pregunta -->
-        <div>
-          <label>Tipo de Pregunta:</label>
-          <select v-model="question.tipo">
-            <option value="rellenar">Rellenar</option>
-            <option value="marcar">Marcar (Opción múltiple)</option>
-          </select>
-        </div>
+<!-- Preguntas -->
+<div v-for="(question, index) in examData.preguntas" :key="index" >
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <label :for="'pregunta-' + index">Pregunta {{ index + 1 }}:</label>
+    <!-- Eliminar pregunta -->
+    <button
+      type="button"
+      @click="examData.preguntas.splice(index, 1)"
+      style="background-color: #dc3545; color: white; border: none; border-radius: 5px; padding: 6px 10px; cursor: pointer;"
+      title="Eliminar esta pregunta"
+    >
+      <i class="fas fa-trash"></i>
+    </button>
+  </div>
+
+  <input v-model="question.texto" type="text" placeholder="Escribe la pregunta aquí" style="width: 100%; margin-top: 5px;" />
+
+  <!-- Tipo de Pregunta -->
+  <div style="margin-top: 10px;">
+    <label>Tipo de Pregunta:</label>
+    <select v-model="question.tipo">
+      <option value="rellenar">Rellenar</option>
+      <option value="marcar">Marcar (Opción múltiple)</option>
+    </select>
+  </div>
 
         <!-- Opciones para Marcar -->
-        <div v-if="question.tipo === 'marcar'">
+        <div v-if="question.tipo === 'marcar'" style="margin-top: 10px;">
           <label>Opciones:</label>
           <div
             v-for="(option, $index) in question.opciones"
             :key="$index"
-            class="option-checkbox"
-            style="display: flex; align-items: center; gap: 10px;"
+            style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;"
           >
             <input
               v-model="question.opciones[$index]"
@@ -67,16 +77,18 @@
               placeholder="Opción"
               style="flex: 1;"
             />
+            <!-- Eliminar opción -->
             <button
               type="button"
-              @click="removeOption(index, $index)"
-              style="background-color: #dc3545; color: white; border: none; border-radius: 5px; padding: 6px 10px; margin-top: -7px;"
+              @click="question.opciones.splice($index, 1)"
+              style="background-color: #dc3545; color: white; border: none; border-radius: 5px; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; cursor: pointer; margin-top: -13px;"
               title="Eliminar esta opción"
             >
               <i class="fas fa-trash"></i>
             </button>
           </div>
-          <button type="button" @click="addOption(index)">Agregar Opción</button>
+          <!-- Agregar opción -->
+          <button type="button" @click="question.opciones.push('')">Agregar Opción</button>
         </div>
       </div>
 
