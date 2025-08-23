@@ -196,9 +196,13 @@ export default {
         doc.text(`Pregunta ${index + 1}:`, 15, yOffset);
         yOffset += 7;
 
+        // --- Ajustar texto de la pregunta si es largo ---
         doc.setFont('helvetica', 'normal');
-        doc.text(`${question.texto}`, 20, yOffset);
-        yOffset += 30;
+        let maxWidth = 170; // ancho máximo del texto en la página
+        let splitText = doc.splitTextToSize(question.texto, maxWidth);
+
+        doc.text(splitText, 20, yOffset); // imprime el texto en varias líneas
+        yOffset += splitText.length * 7; // mover yOffset según las líneas
 
         if (question.tipo === 'marcar') {
           let xOffset = 20;
