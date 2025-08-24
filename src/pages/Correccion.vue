@@ -8,7 +8,7 @@
         class="upload-image"
       />
       <p class="description">
-        Ingresa tu examen en PDF o una imagen para corregirlo con ayuda de la IA
+        Ingresa tu examen en PDF o una IMAGEN para corregirlo con ayuda de la IA
       </p>
 
       <form @submit.prevent="handleSubmit" class="form">
@@ -86,7 +86,7 @@
 
         <!-- Feedback general -->
         <div v-if="grade.resumen_feedback" class="mt-6 p-4 bg-yellow-50 border rounded">
-          <h4 class="font-semibold">💡 Retroalimentación general:</h4>
+          <h4 class="font-semibold">💡 Retroalimentación:</h4>
           <p>{{ grade.resumen_feedback }}</p>
         </div>
 
