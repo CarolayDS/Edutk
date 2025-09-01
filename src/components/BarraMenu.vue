@@ -37,10 +37,10 @@ function scrollToTop() {
           <router-link to="/" class="btn-menu" @click="menuAbierto = false; scrollToTop()">Inicio</router-link>
         </li>
         <li>
-          <router-link to="/materiales" class="btn-menu" @click="menuAbierto = false; scrollToTop()">Materiales</router-link>
+          <router-link to="/materiales" class="btn-menu" @click="menuAbierto = false; scrollToTop()">Herramientas IA</router-link>
         </li>
         <li>
-          <router-link to="/examenes" class="btn-menu" @click="menuAbierto = false; scrollToTop()">Exámenes</router-link>
+          <router-link to="/examenes" class="btn-menu" @click="menuAbierto = false; scrollToTop()">Generar examen</router-link>
         </li>
         <li>
           <router-link to="/correccion" class="btn-menu" @click="menuAbierto = false; scrollToTop()">Corrección</router-link>
