@@ -7,17 +7,19 @@
   <footer id="footer" class="footer">
     <div class="footer-container">
       
-      <!-- Logo y redes 
+      <!-- Logo y redes -->
       <div class="footer-column">
         <img src="../assets/edutk.png" alt="Logo EDUTK" class="footer-logo" />
+        <!--
         <p class="footer-follow">Síguenos:</p>
         <div class="footer-socials">
           <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
           <a href="#"><i class="fab fa-youtube fa-lg"></i></a>
           <a href="https://www.instagram.com/edutk_/"><i class="fab fa-instagram fa-lg"></i></a>
         </div>
-      </div>
       -->
+      </div>
+      
 
       <!-- Contacto -->
       <div class="footer-column">
