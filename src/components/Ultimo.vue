@@ -22,8 +22,8 @@
       <div class="footer-column">
         <h3>CONTACTO</h3>
         <p><i class="fas fa-map-marker-alt"></i> Lima - Perú </p>
-        <p><i class="fas fa-phone"></i> 945671217</p>
-        <p><i class="fas fa-envelope"></i> EduTK@gmail.com</p>
+        <p><i class="fas fa-phone"></i> 953975396</p>
+        <p><i class="fas fa-envelope"></i> edutek.comunicaciones@gmail.com</p>
       </div>
 
       <!-- Mapa -->
